@@ -1,15 +1,18 @@
 package creaturesTest;
-import creatures.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import creatures.Centaur;
 
 class CentaurTest {
 	static Centaur centaur;
 	
-	@BeforeAll
-	static void setUp() {
+	@BeforeEach
+	void setUp() {
 		centaur =  new Centaur("George", "Palomino");
 	}
 	
@@ -35,11 +38,19 @@ class CentaurTest {
 	
 	@Test
 	void testWhenFirstCreatedIsNotCranky() {
-		assertFalse(centaur.isCranky);
+		assertFalse(centaur.isCranky());
 	}
 	
 	@Test
 	void testWhenFirstCreatedIsStandingUp() {
 		assertTrue(centaur.isStanding);
+	}
+	
+	@Test
+	void testGetsTiredAfterRunningOrShootingABowThrice() {
+		centaur.run();
+		centaur.shoot();
+		centaur.run();
+		assertTrue(centaur.isCranky());
 	}
 }

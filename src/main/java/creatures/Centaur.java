@@ -3,7 +3,7 @@ package creatures;
 public class Centaur {
 	public String name;
 	public String breed;
-	public boolean isCranky = false;
+	public int cranky = 0;
 	public boolean isStanding = true;
 	
 	public Centaur(String name, String breed) {
@@ -12,12 +12,18 @@ public class Centaur {
 	}
 	
 	public String shoot() {
+		cranky++;
 		return "Twang!!!";
 	}
 	
 	public String run() {
+		cranky++;
 		return "Clop clop clop clop!";
 	}
 	
-	
+	public boolean isCranky() {
+		if(cranky == 3) {
+			return true;
+		} else return false;
+	}
 }
