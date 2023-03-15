@@ -1,6 +1,7 @@
 package creaturesTest;
 import creatures.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -14,8 +15,8 @@ class CentaurTest {
 	}
 	
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testItHasAName() {
+		assertEquals("George", centaur.name);
 	}
 
 }
