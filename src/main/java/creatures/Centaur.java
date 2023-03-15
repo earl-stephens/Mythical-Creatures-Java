@@ -3,6 +3,8 @@ package creatures;
 public class Centaur {
 	public String name;
 	public String breed;
+	public boolean isCranky = false;
+	public boolean isStanding = true;
 	
 	public Centaur(String name, String breed) {
 		this.name = name;
@@ -16,4 +18,6 @@ public class Centaur {
 	public String run() {
 		return "Clop clop clop clop!";
 	}
+	
+	
 }

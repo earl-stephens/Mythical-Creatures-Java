@@ -1,8 +1,7 @@
 package creaturesTest;
 import creatures.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -32,5 +31,15 @@ class CentaurTest {
 	@Test
 	void testItMakesAHorseSoundWhenItRuns() {
 		assertEquals("Clop clop clop clop!", centaur.run());
+	}
+	
+	@Test
+	void testWhenFirstCreatedIsNotCranky() {
+		assertFalse(centaur.isCranky);
+	}
+	
+	@Test
+	void testWhenFirstCreatedIsStandingUp() {
+		assertTrue(centaur.isStanding);
 	}
 }
