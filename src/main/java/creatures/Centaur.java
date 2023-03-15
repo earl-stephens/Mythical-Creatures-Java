@@ -12,4 +12,8 @@ public class Centaur {
 	public String shoot() {
 		return "Twang!!!";
 	}
+	
+	public String run() {
+		return "Clop clop clop clop!";
+	}
 }

@@ -28,4 +28,9 @@ class CentaurTest {
 	void testItHasExcellentBowSkills() {
 		assertEquals("Twang!!!", centaur.shoot());
 	}
+	
+	@Test
+	void testItMakesAHorseSoundWhenItRuns() {
+		assertEquals("Clop clop clop clop!", centaur.run());
+	}
 }
