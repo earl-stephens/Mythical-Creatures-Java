@@ -9,8 +9,9 @@ class UnicornTest {
 	static Unicorn unicorn;
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testItHasAName() {
+		unicorn = new Unicorn("Robert");
+		assertEquals("Robert", unicorn.getName());
 	}
 
 }
