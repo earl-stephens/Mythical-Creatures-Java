@@ -33,4 +33,12 @@ public class Centaur {
 	public boolean isStanding() {
 		return true;
 	}
+	
+	public String sleep() {
+		if(isStanding()) {
+			return "NO!";
+		} else {
+			return "Good night";
+		}
+	}
 }

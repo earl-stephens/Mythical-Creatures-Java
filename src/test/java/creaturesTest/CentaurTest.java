@@ -63,4 +63,9 @@ class CentaurTest {
 		assertTrue(centaur.isCranky());
 		assertEquals("NO!", centaur.shoot());
 	}
+	
+	@Test
+	void testWillNotSleepIfStanding() {
+		assertEquals("NO!", centaur.sleep());
+	}
 }
