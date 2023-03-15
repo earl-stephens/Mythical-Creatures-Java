@@ -68,4 +68,13 @@ class CentaurTest {
 	void testWillNotSleepIfStanding() {
 		assertEquals("NO!", centaur.sleep());
 	}
+	
+	@Test
+	void testNotStandingAfterLayingDown() {
+		assertTrue(centaur.isStanding());
+		
+		centaur.layDown();
+		assertFalse(centaur.isStanding());
+		assertTrue(centaur.isLaying());
+	}
 }

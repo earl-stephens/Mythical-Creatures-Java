@@ -4,6 +4,7 @@ public class Centaur {
 	public String name;
 	public String breed;
 	public int cranky = 0;
+	public boolean standing = true;
 	
 	public Centaur(String name, String breed) {
 		this.name = name;
@@ -31,7 +32,7 @@ public class Centaur {
 	}
 	
 	public boolean isStanding() {
-		return true;
+		return standing;
 	}
 	
 	public String sleep() {
@@ -40,5 +41,13 @@ public class Centaur {
 		} else {
 			return "Good night";
 		}
+	}
+	
+	public boolean isLaying() {
+		return !standing;
+	}
+	
+	public void layDown() {
+		standing = false;
 	}
 }
