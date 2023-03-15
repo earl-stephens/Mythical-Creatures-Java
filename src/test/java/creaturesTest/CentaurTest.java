@@ -105,4 +105,20 @@ class CentaurTest {
 		centaur.standUp();
 		assertTrue(centaur.isStanding());
 	}
+	
+	@Test
+	void testIsNoLongerCrankyAfterSleeping() {
+		centaur.shoot();
+		centaur.run();
+		centaur.shoot();
+		assertTrue(centaur.isCranky());
+		
+		centaur.layDown();
+		centaur.sleep();
+		assertFalse(centaur.isCranky());
+		
+		centaur.standUp();
+		assertEquals("Twang!!!", centaur.shoot());
+		assertEquals("Clop clop clop clop!", centaur.run());
+	}
 }

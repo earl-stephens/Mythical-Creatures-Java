@@ -43,6 +43,7 @@ public class Centaur {
 		if(isStanding()) {
 			return "NO!";
 		} else {
+			cranky = 0;
 			return "Good night";
 		}
 	}
