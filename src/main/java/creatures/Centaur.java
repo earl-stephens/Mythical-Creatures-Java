@@ -4,7 +4,6 @@ public class Centaur {
 	public String name;
 	public String breed;
 	public int cranky = 0;
-	public boolean isStanding = true;
 	
 	public Centaur(String name, String breed) {
 		this.name = name;
@@ -25,5 +24,9 @@ public class Centaur {
 		if(cranky == 3) {
 			return true;
 		} else return false;
+	}
+	
+	public boolean isStanding() {
+		return true;
 	}
 }

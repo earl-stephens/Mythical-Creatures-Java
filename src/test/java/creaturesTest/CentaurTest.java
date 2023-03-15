@@ -43,7 +43,7 @@ class CentaurTest {
 	
 	@Test
 	void testWhenFirstCreatedIsStandingUp() {
-		assertTrue(centaur.isStanding);
+		assertTrue(centaur.isStanding());
 	}
 	
 	@Test
