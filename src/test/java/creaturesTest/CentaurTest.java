@@ -19,4 +19,8 @@ class CentaurTest {
 		assertEquals("George", centaur.name);
 	}
 
+	@Test
+	void testItHasAHorseBreed() {
+		assertEquals("Palomino", centaur.breed);
+	}
 }
