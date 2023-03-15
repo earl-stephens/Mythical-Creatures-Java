@@ -63,6 +63,8 @@ public class Centaur {
 	public String drinkPotion() {
 		if(!standing) {
 			return "NO!";
+		} else if(cranky == 0){
+			return "I don't feel good!";
 		} else {
 			cranky = 0;
 			return "This tastes good!";

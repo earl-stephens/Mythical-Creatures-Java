@@ -139,4 +139,16 @@ class CentaurTest {
 		assertFalse(centaur.isStanding());
 		assertEquals("NO!", centaur.drinkPotion());
 	}
+	
+	@Test
+	void testGetsSickIfDrinkingPotionWhileRested() {
+		centaur.shoot();
+		centaur.run();
+		centaur.shoot();
+		assertTrue(centaur.isCranky());
+		centaur.drinkPotion();
+		assertFalse(centaur.isCranky());
+		
+		assertEquals("I don't feel good!", centaur.drinkPotion());
+	}
 }
