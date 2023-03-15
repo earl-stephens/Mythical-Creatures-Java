@@ -12,7 +12,7 @@ public class Centaur {
 	}
 	
 	public String shoot() {
-		if(cranky == 3) {
+		if(cranky == 3 || isLaying() == true) {
 			return "NO!";
 		} else {
 			cranky++;
