@@ -1,6 +1,7 @@
 package creaturesTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -76,5 +77,11 @@ class CentaurTest {
 		centaur.layDown();
 		assertFalse(centaur.isStanding());
 		assertTrue(centaur.isLaying());
+	}
+	
+	@Test
+	void testCanSleepWhenLayingDown() {
+		centaur.layDown();
+		assertNotEquals("NO!", centaur.sleep());
 	}
 }
