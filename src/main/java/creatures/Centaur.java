@@ -21,8 +21,12 @@ public class Centaur {
 	}
 	
 	public String run() {
-		cranky++;
-		return "Clop clop clop clop!";
+		if(isLaying() == true) {
+			return "NO!";
+		} else {
+			cranky++;
+			return "Clop clop clop clop!";
+		}
 	}
 	
 	public boolean isCranky() {
@@ -49,5 +53,9 @@ public class Centaur {
 	
 	public void layDown() {
 		standing = false;
+	}
+	
+	public void standUp() {
+		standing = true;
 	}
 }

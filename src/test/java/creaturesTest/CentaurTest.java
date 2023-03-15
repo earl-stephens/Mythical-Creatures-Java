@@ -90,4 +90,19 @@ class CentaurTest {
 		centaur.layDown();
 		assertEquals("NO!", centaur.shoot());
 	}
+	
+	@Test
+	void testCanNotRunWhileLayingDown() {
+		centaur.layDown();
+		assertEquals("NO!", centaur.run());
+	}
+	
+	@Test
+	void testItCanStandUp() {
+		assertTrue(centaur.isStanding());
+		centaur.layDown();
+		assertFalse(centaur.isStanding());
+		centaur.standUp();
+		assertTrue(centaur.isStanding());
+	}
 }
