@@ -1,18 +1,27 @@
 package creatures;
 
 public class Centaur {
-	public String name;
-	public String breed;
-	public int cranky = 0;
-	public boolean standing = true;
+	private String name;
+	private String breed;
+
+	private int cranky = 0;
+	private boolean standing = true;
 	
 	public Centaur(String name, String breed) {
 		this.name = name;
 		this.breed = breed;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
+	public String getBreed() {
+		return breed;
+	}
+	
 	public String shoot() {
-		if(cranky == 3 || isLaying() == true) {
+		if(cranky == 3 || isLaying()) {
 			return "NO!";
 		} else {
 			cranky++;
@@ -21,7 +30,7 @@ public class Centaur {
 	}
 	
 	public String run() {
-		if(isLaying() == true) {
+		if(isLaying()) {
 			return "NO!";
 		} else {
 			cranky++;
@@ -30,9 +39,8 @@ public class Centaur {
 	}
 	
 	public boolean isCranky() {
-		if(cranky == 3) {
-			return true;
-		} else return false;
+		if(cranky == 3) return true;
+		return false;
 	}
 	
 	public boolean isStanding() {

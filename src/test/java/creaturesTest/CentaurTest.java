@@ -19,12 +19,12 @@ class CentaurTest {
 	
 	@Test
 	void testItHasAName() {
-		assertEquals("George", centaur.name);
+		assertEquals("George", centaur.getName());
 	}
 
 	@Test
 	void testItHasAHorseBreed() {
-		assertEquals("Palomino", centaur.breed);
+		assertEquals("Palomino", centaur.getBreed());
 	}
 	
 	@Test
