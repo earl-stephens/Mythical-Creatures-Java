@@ -23,4 +23,9 @@ class CentaurTest {
 	void testItHasAHorseBreed() {
 		assertEquals("Palomino", centaur.breed);
 	}
+	
+	@Test
+	void testItHasExcellentBowSkills() {
+		assertEquals("Twang!!!", centaur.shoot());
+	}
 }
