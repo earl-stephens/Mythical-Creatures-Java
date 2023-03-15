@@ -121,4 +121,15 @@ class CentaurTest {
 		assertEquals("Twang!!!", centaur.shoot());
 		assertEquals("Clop clop clop clop!", centaur.run());
 	}
+	
+	@Test
+	void testBecomesRestedAfterDrinkingAPotion() {
+		centaur.shoot();
+		centaur.run();
+		centaur.shoot();
+		assertTrue(centaur.isCranky());
+		
+		centaur.drinkPotion();
+		assertFalse(centaur.isCranky());
+	}
 }

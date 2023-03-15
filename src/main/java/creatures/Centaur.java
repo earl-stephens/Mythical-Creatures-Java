@@ -59,4 +59,8 @@ public class Centaur {
 	public void standUp() {
 		standing = true;
 	}
+	
+	public void drinkPotion() {
+		cranky = 0;
+	}
 }
