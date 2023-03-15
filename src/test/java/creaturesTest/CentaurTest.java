@@ -53,4 +53,14 @@ class CentaurTest {
 		centaur.run();
 		assertTrue(centaur.isCranky());
 	}
+	
+	@Test
+	void testWillNotShootABowWhenCranky() {
+		assertFalse(centaur.isCranky());
+		centaur.shoot();
+		centaur.shoot();
+		centaur.shoot();
+		assertTrue(centaur.isCranky());
+		assertEquals("NO!", centaur.shoot());
+	}
 }

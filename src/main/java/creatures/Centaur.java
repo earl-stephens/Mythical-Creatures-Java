@@ -11,8 +11,12 @@ public class Centaur {
 	}
 	
 	public String shoot() {
-		cranky++;
-		return "Twang!!!";
+		if(cranky == 3) {
+			return "NO!";
+		} else {
+			cranky++;
+			return "Twang!!!";
+		}
 	}
 	
 	public String run() {
