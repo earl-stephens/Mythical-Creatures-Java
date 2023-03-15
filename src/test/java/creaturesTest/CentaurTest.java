@@ -132,4 +132,11 @@ class CentaurTest {
 		centaur.drinkPotion();
 		assertFalse(centaur.isCranky());
 	}
+	
+	@Test
+	void testCanOnlyDrinkPotionWhenStanding() {
+		centaur.layDown();
+		assertFalse(centaur.isStanding());
+		assertEquals("NO!", centaur.drinkPotion());
+	}
 }

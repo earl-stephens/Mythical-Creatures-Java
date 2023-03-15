@@ -60,7 +60,12 @@ public class Centaur {
 		standing = true;
 	}
 	
-	public void drinkPotion() {
-		cranky = 0;
+	public String drinkPotion() {
+		if(!standing) {
+			return "NO!";
+		} else {
+			cranky = 0;
+			return "This tastes good!";
+		}
 	}
 }
