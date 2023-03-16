@@ -7,6 +7,11 @@ public class Unicorn {
 	public Unicorn(String name) {
 		this.name = name;
 	}
+	
+	public Unicorn(String name, String color) {
+		this.name = name;
+		this.color = color;
+	}
 
 	public String getName() {
 		return name;

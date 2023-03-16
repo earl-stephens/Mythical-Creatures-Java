@@ -20,5 +20,12 @@ class UnicornTest {
 		assertEquals("Silver", unicorn.getColor());
 		assertTrue(unicorn.isSilver());
 	}
+	
+	@Test
+	void testColorDoesNotHaveToBeSilver() {
+		unicorn = new Unicorn("Barbara", "Purple");
+		assertEquals("Purple", unicorn.getColor());
+		assertFalse(unicorn.isSilver());
+	}
 
 }
