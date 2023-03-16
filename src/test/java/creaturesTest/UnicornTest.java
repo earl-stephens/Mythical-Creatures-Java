@@ -13,5 +13,12 @@ class UnicornTest {
 		unicorn = new Unicorn("Robert");
 		assertEquals("Robert", unicorn.getName());
 	}
+	
+	@Test
+	void testItIsSilverByDefault() {
+		unicorn = new Unicorn("Margaret");
+		assertEquals("Silver", unicorn.getColor());
+		assertTrue(unicorn.isSilver());
+	}
 
 }
