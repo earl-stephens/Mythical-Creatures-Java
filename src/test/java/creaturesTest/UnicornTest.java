@@ -27,5 +27,11 @@ class UnicornTest {
 		assertEquals("Purple", unicorn.getColor());
 		assertFalse(unicorn.isSilver());
 	}
-
+	
+	@Test
+	void testItSaysSparklyStuff() {
+		unicorn = new Unicorn("Johnny");
+		assertEquals("**;* Wonderful! **;*", unicorn.say("Wonderful!"));
+		assertEquals("**;* I don't like you very much. **;*", unicorn.say("I don't like you very much."));
+	}
 }

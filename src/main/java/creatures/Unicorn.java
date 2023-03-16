@@ -27,4 +27,12 @@ public class Unicorn {
 		}
 		return false;
 	}
+	
+	public String say(String phrase) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("**;* ");
+		sb.append(phrase);
+		sb.append(" **;*");
+		return sb.toString();
+	}
 }
