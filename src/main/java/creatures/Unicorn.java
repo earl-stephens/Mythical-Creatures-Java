@@ -22,10 +22,7 @@ public class Unicorn {
 	}
 	
 	public boolean isSilver() {
-		if(color.equals("Silver")) {
-			return true;
-		}
-		return false;
+		return color.equals("Silver");
 	}
 	
 	public String say(String phrase) {
