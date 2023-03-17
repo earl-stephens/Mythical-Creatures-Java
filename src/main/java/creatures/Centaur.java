@@ -39,7 +39,8 @@ public class Centaur {
 	}
 	
 	public boolean isCranky() {
-		return cranky == 3;
+		if(cranky == 3) return true;
+		return false;
 	}
 	
 	public boolean isStanding() {
