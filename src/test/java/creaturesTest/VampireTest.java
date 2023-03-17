@@ -14,5 +14,12 @@ class VampireTest {
 		
 		assertEquals("Dracula", vampire.getName());
 	}
+	
+	@Test
+	void testCanBeNamedSomethingElse() {
+		vampire = new Vampire("Vladimir");
+		
+		assertEquals("Vladimir", vampire.getName());
+	}
 
 }
