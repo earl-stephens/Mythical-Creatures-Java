@@ -22,4 +22,10 @@ class VampireTest {
 		assertEquals("Vladimir", vampire.getName());
 	}
 
+	@Test
+	void testItKeepsAPetBatByDefault() {
+		vampire = new Vampire("Ruthven");
+		
+		assertEquals("bat", vampire.getPet());
+	}
 }
