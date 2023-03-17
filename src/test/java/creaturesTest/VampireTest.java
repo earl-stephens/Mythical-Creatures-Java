@@ -35,4 +35,19 @@ class VampireTest {
 		
 		assertEquals("fox", vampire.getPet());
 	}
+	
+	@Test
+	void testIsThirstyByDefault() {
+		vampire = new Vampire("The Count");
+		
+		assertTrue(vampire.isThirsty());
+	}
+	
+	@Test
+	void testIsNotThirstyAfterDrinking() {
+		vampire = new Vampire("Elizabeth Bathory");
+		
+		vampire.drink();
+		assertFalse(vampire.isThirsty());
+	}
 }

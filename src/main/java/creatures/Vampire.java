@@ -3,6 +3,7 @@ package creatures;
 public class Vampire {
 	private String name;
 	private String pet = "bat";
+	private boolean thirsty = true;
 	
 	public Vampire(String name) {
 		this.name = name;
@@ -19,5 +20,13 @@ public class Vampire {
 	
 	public String getPet() {
 		return pet;
+	}
+	
+	public boolean isThirsty() {
+		return thirsty;
+	}
+	
+	public void drink() {
+		thirsty = false;
 	}
 }
