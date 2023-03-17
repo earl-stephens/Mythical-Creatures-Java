@@ -8,6 +8,11 @@ public class Vampire {
 		this.name = name;
 	}
 	
+	public Vampire(String name, String pet) {
+		this.name = name;
+		this.pet = pet;
+	}
+	
 	public String getName() {
 		return name;
 	}

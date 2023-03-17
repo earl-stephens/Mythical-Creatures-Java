@@ -28,4 +28,11 @@ class VampireTest {
 		
 		assertEquals("bat", vampire.getPet());
 	}
+	
+	@Test
+	void testItCanKeepOtherPets() {
+		vampire = new Vampire("Varney", "fox");
+		
+		assertEquals("fox", vampire.getPet());
+	}
 }
