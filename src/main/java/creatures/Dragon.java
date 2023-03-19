@@ -4,6 +4,7 @@ public class Dragon {
 	private String name;
 	private String rider;
 	private String color;
+	private boolean hungry = true;
 	
 	public Dragon(String name, String color, String rider) {
 		this.name = name;
@@ -21,5 +22,9 @@ public class Dragon {
 	
 	public String getColor() {
 		return color;
+	}
+	
+	public boolean isHungry() {
+		return hungry;
 	}
 }

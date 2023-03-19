@@ -49,4 +49,11 @@ class DragonTest {
 		
 		assertEquals("bronze", dragon.getColor());
 	}
+	
+	@Test
+	void testItWasBornHungry() {
+		dragon = new Dragon("Mnementh", "bronze", "Flar");
+
+		assertTrue(dragon.isHungry());
+	}
 }
