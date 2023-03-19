@@ -14,5 +14,39 @@ class DragonTest {
 		
 		assertEquals("Ramoth", dragon.getName());
 	}
+	
+	@Test
+	void testItHasARider() {
+		dragon = new Dragon("Ramoth", "gold", "Lessa");
+		
+		assertEquals("Lessa", dragon.getRider());
+	}
+	
+	@Test
+	void testItHasAColor() {
+		dragon = new Dragon("Ramoth", "gold", "Lessa");
+		
+		assertEquals("gold", dragon.getColor());
+	}
+	
+	@Test
+	void TestItIsADifferentDragon() {
+		dragon = new Dragon("Mnementh", "bronze", "Flar");
+		
+		assertEquals("Mnementh", dragon.getName());
+	}
+	
+	@Test
+	void testItHasADifferentRider() {
+		dragon = new Dragon("Mnementh", "bronze", "Flar");
 
+		assertEquals("Flar", dragon.getRider());
+	}
+	
+	@Test
+	void testItHasADifferentColor() {
+		dragon = new Dragon("Mnementh", "bronze", "Flar");
+		
+		assertEquals("bronze", dragon.getColor());
+	}
 }
