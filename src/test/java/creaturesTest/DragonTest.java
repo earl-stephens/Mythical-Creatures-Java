@@ -56,4 +56,19 @@ class DragonTest {
 
 		assertTrue(dragon.isHungry());
 	}
+	
+	@Test
+	void testItEatsALot() {
+		dragon = new Dragon("Mnementh", "bronze", "Flar");
+		assertTrue(dragon.isHungry());
+		
+		dragon.eat();
+		assertTrue(dragon.isHungry());
+		
+		dragon.eat();
+		assertTrue(dragon.isHungry());
+		
+		dragon.eat();
+		assertFalse(dragon.isHungry());
+	}
 }
