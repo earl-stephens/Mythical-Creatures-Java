@@ -8,6 +8,11 @@ public class Hobbit {
 		this.name = name;
 	}
 	
+	public Hobbit(String name, String disposition) {
+		this.name = name;
+		this.disposition = disposition;
+	}
+	
 	public String getName() {
 		return name;
 	}
