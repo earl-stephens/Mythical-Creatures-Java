@@ -3,6 +3,7 @@ package creatures;
 public class Pirate {
 	private String name;
 	private String job = "Scallywag";
+	private int cursedCounter = 0;
 	
 	public Pirate(String name) {
 		this.name = name;
@@ -19,5 +20,13 @@ public class Pirate {
 	
 	public String getJob() {
 		return job;
+	}
+	
+	public void commitHeinousAct() {
+		cursedCounter++;
+	}
+	
+	public boolean isCursed() {
+		return cursedCounter >= 3;
 	}
 }

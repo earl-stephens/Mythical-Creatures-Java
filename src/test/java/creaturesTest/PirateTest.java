@@ -35,4 +35,19 @@ class PirateTest {
 		
 		assertEquals("cook", pirate.getJob());
 	}
+	
+	@Test
+	void testItIsNotCursedByDefault() {
+		pirate = new Pirate("Jack");
+		assertFalse(pirate.isCursed());
+		
+		pirate.commitHeinousAct();
+		assertFalse(pirate.isCursed());
+		
+		pirate.commitHeinousAct();
+		assertFalse(pirate.isCursed());
+		
+		pirate.commitHeinousAct();
+		assertTrue(pirate.isCursed());
+	}
 }
