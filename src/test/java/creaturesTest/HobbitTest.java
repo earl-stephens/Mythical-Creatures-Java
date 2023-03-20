@@ -56,4 +56,15 @@ class HobbitTest {
 		
 		assertFalse(hobbit.isAnAdult());
 	}
+	
+	@Test
+	void testItComesOfAgeAt33() {
+		hobbit = new Hobbit("Otho");
+		
+		for(int i = 0; i < 33; i++) {
+			hobbit.celebrateBirthday();
+		}
+		
+		assertTrue(hobbit.isAnAdult());
+	}
 }
