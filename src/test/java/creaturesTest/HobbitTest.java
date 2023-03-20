@@ -32,6 +32,8 @@ class HobbitTest {
 	@Test
 	void testItCanHaveADifferentDisposition() {
 		hobbit = new Hobbit("Frodo", "adventurous");
+		
+		assertEquals("adventurous", hobbit.getDisposition());
 	}
 	
 	@Test
