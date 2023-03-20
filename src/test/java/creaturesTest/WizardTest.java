@@ -14,5 +14,11 @@ class WizardTest {
 		
 		assertEquals("Eric", wizard.getName());
 	}
-
+	
+	@Test
+	void testItHasADifferentName() {
+		wizard = new Wizard("Alex");
+		
+		assertEquals("Alex", wizard.getName());
+	}
 }
