@@ -28,4 +28,11 @@ class PirateTest {
 		
 		assertEquals("Scallywag", pirate.getJob());
 	}
+	
+	@Test
+	void testItIsntAlwaysAScallywag() {
+		pirate = new Pirate("Jack", "cook");
+		
+		assertEquals("cook", pirate.getJob());
+	}
 }

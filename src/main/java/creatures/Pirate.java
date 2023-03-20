@@ -8,6 +8,11 @@ public class Pirate {
 		this.name = name;
 	}
 	
+	public Pirate(String name, String job) {
+		this.name = name;
+		this.job = job;
+	}
+	
 	public String getName() {
 		return name;
 	}
