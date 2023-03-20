@@ -4,6 +4,7 @@ public class Pirate {
 	private String name;
 	private String job = "Scallywag";
 	private int cursedCounter = 0;
+	private int booty = 0;
 	
 	public Pirate(String name) {
 		this.name = name;
@@ -28,5 +29,13 @@ public class Pirate {
 	
 	public boolean isCursed() {
 		return cursedCounter >= 3;
+	}
+	
+	public int getBooty() {
+		return booty;
+	}
+	
+	public void robShip() {
+		booty += 100;
 	}
 }

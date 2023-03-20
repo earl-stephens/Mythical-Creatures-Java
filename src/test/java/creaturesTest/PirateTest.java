@@ -50,4 +50,23 @@ class PirateTest {
 		pirate.commitHeinousAct();
 		assertTrue(pirate.isCursed());
 	}
+	
+	@Test
+	void testItHasABooty() {
+		pirate = new Pirate("Jack Sparrow");
+		
+		assertEquals(0, pirate.getBooty());
+	}
+	
+	@Test
+	void testItGetsBootyForRobbingAShip() {
+		pirate = new Pirate("Jack Sparrow");
+		assertEquals(0, pirate.getBooty());
+		
+		pirate.robShip();
+		assertEquals(100, pirate.getBooty());
+		
+		pirate.robShip();
+		assertEquals(200, pirate.getBooty());
+	}
 }
