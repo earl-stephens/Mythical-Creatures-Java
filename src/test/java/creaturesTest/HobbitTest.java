@@ -34,5 +34,15 @@ class HobbitTest {
 		hobbit = new Hobbit("Frodo", "adventurous");
 	}
 	
-	
+	@Test
+	void testItCanGrowOlderWhenCelebratingBirthdays() {
+		hobbit = new Hobbit("Meriadoc");
+		assertEquals(0, hobbit.getAge());
+		
+		for(int i = 0; i < 5; i++) {
+			hobbit.celebrateBirthday();
+		}
+		
+		assertEquals(5, hobbit.getAge());
+	}
 }
