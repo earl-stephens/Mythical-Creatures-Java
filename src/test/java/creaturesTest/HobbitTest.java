@@ -15,4 +15,10 @@ class HobbitTest {
 		assertEquals("Bilbo", hobbit.getName());
 	}
 
+	@Test
+	void testItCanHaveAnotherName() {
+		hobbit = new Hobbit("Peregrin");
+		
+		assertEquals("Peregrin", hobbit.getName());
+	}
 }
