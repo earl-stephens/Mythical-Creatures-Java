@@ -45,4 +45,15 @@ class HobbitTest {
 		
 		assertEquals(5, hobbit.getAge());
 	}
+	
+	@Test
+	void testItIsConsideredAChildAt32() {
+		hobbit = new Hobbit("Gerontius");
+		
+		for(int i = 0; i < 32; i++) {
+			hobbit.celebrateBirthday();
+		}
+		
+		assertFalse(hobbit.isAnAdult());
+	}
 }

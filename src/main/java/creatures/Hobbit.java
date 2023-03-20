@@ -29,4 +29,8 @@ public class Hobbit {
 	public void celebrateBirthday() {
 		age++;
 	}
+	
+	public boolean isAnAdult() {
+		return age == 33;
+	}
 }
