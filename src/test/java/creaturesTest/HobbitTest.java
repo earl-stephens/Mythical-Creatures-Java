@@ -76,9 +76,15 @@ class HobbitTest {
 	void testIsOldAt101() {
 		hobbit = new Hobbit("Bilbo");
 		
+		assertFalse(hobbit.isOld());
+		
 		for(int i = 0; i < 101; i++) {
 			hobbit.celebrateBirthday();
 		}
+		
+		assertTrue(hobbit.isOld());
+		
+		hobbit.celebrateBirthday();
 		
 		assertTrue(hobbit.isOld());
 	}
