@@ -21,4 +21,11 @@ class PirateTest {
 		
 		assertEquals("Blackbeard", pirate.getName());
 	}
+	
+	@Test
+	void testItIsAScallywagByDefault() {
+		pirate = new Pirate("Jane");
+		
+		assertEquals("Scallywag", pirate.getJob());
+	}
 }
