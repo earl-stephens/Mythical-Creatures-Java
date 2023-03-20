@@ -31,6 +31,6 @@ public class Hobbit {
 	}
 	
 	public boolean isAnAdult() {
-		return age == 33;
+		return age >= 33;
 	}
 }

@@ -66,5 +66,9 @@ class HobbitTest {
 		}
 		
 		assertTrue(hobbit.isAnAdult());
+		
+		hobbit.celebrateBirthday();
+		
+		assertTrue(hobbit.isAnAdult());
 	}
 }
