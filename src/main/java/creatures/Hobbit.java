@@ -37,4 +37,8 @@ public class Hobbit {
 	public boolean isOld() {
 		return age >= 101;
 	}
+	
+	public boolean hasRing() {
+		return name.equals("Frodo");
+	}
 }

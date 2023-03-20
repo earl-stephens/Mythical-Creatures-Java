@@ -82,4 +82,13 @@ class HobbitTest {
 		
 		assertTrue(hobbit.isOld());
 	}
+	
+	@Test
+	void testItHasTheRingIfNamedFrodo() {
+		Hobbit hobbit1 = new Hobbit("Sam");
+		Hobbit hobbit2 = new Hobbit("Frodo");
+		
+		assertFalse(hobbit1.hasRing());
+		assertTrue(hobbit2.hasRing());
+	}
 }
