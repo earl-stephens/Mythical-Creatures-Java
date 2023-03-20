@@ -91,4 +91,11 @@ class HobbitTest {
 		assertFalse(hobbit1.hasRing());
 		assertTrue(hobbit2.hasRing());
 	}
+	
+	@Test
+	void testTheyAreShort() {
+		hobbit = new Hobbit("Bilbo");
+		
+		assertTrue(hobbit.isShort());
+	}
 }

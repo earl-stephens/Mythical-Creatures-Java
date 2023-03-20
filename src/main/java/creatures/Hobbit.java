@@ -41,4 +41,8 @@ public class Hobbit {
 	public boolean hasRing() {
 		return name.equals("Frodo");
 	}
+	
+	public boolean isShort() {
+		return true;
+	}
 }
