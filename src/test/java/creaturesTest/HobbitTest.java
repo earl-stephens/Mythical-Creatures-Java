@@ -21,4 +21,11 @@ class HobbitTest {
 		
 		assertEquals("Peregrin", hobbit.getName());
 	}
+	
+	@Test
+	void testItHasAnUnadventurousDisposition() {
+		hobbit = new Hobbit("Samwise");
+		
+		assertEquals("homebody", hobbit.getDisposition());
+	}
 }
