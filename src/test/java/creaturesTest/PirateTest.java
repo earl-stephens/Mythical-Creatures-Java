@@ -15,4 +15,10 @@ class PirateTest {
 		assertEquals("Jane", pirate.getName());
 	}
 
+	@Test
+	void testItCanHaveADifferentName() {
+		pirate = new Pirate("Blackbeard");
+		
+		assertEquals("Blackbeard", pirate.getName());
+	}
 }
