@@ -42,4 +42,11 @@ class WizardTest {
 		
 		assertEquals("sudo chown ~/bin", wizard.incantation("chown ~/bin"));
 	}
+	
+	@Test
+	void testItHasManyRootPowers() {
+		wizard = new Wizard("Sal", true);
+		
+		assertEquals("sudo rm -rf /home/mirandax", wizard.incantation("rm -rf /home/mirandax"));
+	}
 }
