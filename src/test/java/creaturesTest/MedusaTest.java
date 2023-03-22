@@ -31,7 +31,7 @@ class MedusaTest {
 		medusa.stare(victim);
 		
 		assertEquals(1, medusa.statuesGetCount());
-		//assertEquals("Perseus", medusa.getVictimName(0));
-		//assertEquals(Person.class, medusa.getVictimName(0).class);
+		assertEquals("Perseus", medusa.getVictim(0).getName());
+		assertEquals(Person.class, medusa.getVictim(0).getClass());
 	}
 }

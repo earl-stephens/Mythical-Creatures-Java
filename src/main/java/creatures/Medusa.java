@@ -22,4 +22,8 @@ public class Medusa {
 	public void stare(Person victim) {
 		statues.add(victim);
 	}
+	
+	public Person getVictim(int index) {
+		return statues.get(index);
+	}
 }
