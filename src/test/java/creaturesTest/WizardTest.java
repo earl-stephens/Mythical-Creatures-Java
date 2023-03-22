@@ -63,4 +63,15 @@ class WizardTest {
 		
 		assertEquals("MAGIC MISSILE!", wizard.cast());
 	}
+	
+	@Test
+	void testItGetsTiredAfterCasting3Spells() {
+		wizard = new Wizard("Radagast");
+		wizard.cast();
+		wizard.cast();
+		assertTrue(wizard.isRested());
+		wizard.cast();
+		
+		assertFalse(wizard.isRested());
+	}
 }

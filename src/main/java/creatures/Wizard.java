@@ -31,6 +31,7 @@ public class Wizard {
 	}
 	
 	public String cast() {
+		rested++;
 		return "MAGIC MISSILE!";
 	}
 }
