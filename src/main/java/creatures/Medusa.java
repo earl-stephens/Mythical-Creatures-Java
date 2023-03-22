@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Medusa {
 	private String name;
-	private List<String> statues = new ArrayList<>();	
+	private List<Person> statues = new ArrayList<>();	
 	
 	public Medusa(String name) {
 		this.name = name;
@@ -17,5 +17,9 @@ public class Medusa {
 	
 	public int statuesGetCount() {
 		return statues.size();
+	}
+	
+	public void stare(Person victim) {
+		statues.add(victim);
 	}
 }
