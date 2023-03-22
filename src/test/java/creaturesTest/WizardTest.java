@@ -35,4 +35,11 @@ class WizardTest {
 		
 		assertFalse(wizard.isBearded());
 	}
+	
+	@Test
+	void testItHasRootPowers() {
+		wizard = new Wizard("Stella", false);
+		
+		assertEquals("sudo chown ~/bin", wizard.incantation("chown ~/bin"));
+	}
 }

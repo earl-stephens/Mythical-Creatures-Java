@@ -20,4 +20,8 @@ public class Wizard {
 	public boolean isBearded() {
 		return bearded;
 	}
+	
+	public String incantation(String incantation) {
+		return "sudo " + incantation;
+	}
 }
