@@ -21,4 +21,18 @@ class WizardTest {
 		
 		assertEquals("Alex", wizard.getName());
 	}
+	
+	@Test
+	void testItIsBeardedByDefault() {
+		wizard = new Wizard("Ben");
+		
+		assertTrue(wizard.isBearded());
+	}
+	
+	@Test
+	void testIsNotAlwaysBearded() {
+		wizard = new Wizard("Valerie", false);
+		
+		assertFalse(wizard.isBearded());
+	}
 }
