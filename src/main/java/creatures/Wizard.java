@@ -29,4 +29,8 @@ public class Wizard {
 	public boolean isRested() {
 		return rested < 3;
 	}
+	
+	public String cast() {
+		return "MAGIC MISSILE!";
+	}
 }
