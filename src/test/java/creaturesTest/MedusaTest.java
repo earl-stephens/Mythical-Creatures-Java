@@ -19,4 +19,8 @@ class MedusaTest {
 		assertEquals("Cassiopeia", medusa.getName());
 	}
 
+	@Test
+	void testItHasNoStatuesWhenCreated() {
+		assertEquals(0, medusa.statuesGetCount());
+	}
 }
