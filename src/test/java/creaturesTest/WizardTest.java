@@ -49,4 +49,11 @@ class WizardTest {
 		
 		assertEquals("sudo rm -rf /home/mirandax", wizard.incantation("rm -rf /home/mirandax"));
 	}
+	
+	@Test
+	void testItStartsRested() {
+		wizard = new Wizard("Gandalf");
+		
+		assertTrue(wizard.isRested());
+	}
 }

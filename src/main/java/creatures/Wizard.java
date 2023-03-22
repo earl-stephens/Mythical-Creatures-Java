@@ -3,6 +3,7 @@ package creatures;
 public class Wizard {
 	private String name;
 	private boolean bearded = true;
+	private int rested = 0;
 	
 	public Wizard(String name) {
 		this.name = name;
@@ -23,5 +24,9 @@ public class Wizard {
 	
 	public String incantation(String incantation) {
 		return "sudo " + incantation;
+	}
+	
+	public boolean isRested() {
+		return rested < 3;
 	}
 }
