@@ -20,6 +20,7 @@ public class Medusa {
 	}
 	
 	public void stare(Person victim) {
+		victim.setStoned(true);
 		statues.add(victim);
 	}
 	

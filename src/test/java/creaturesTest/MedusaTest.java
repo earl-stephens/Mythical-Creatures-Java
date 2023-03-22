@@ -1,10 +1,11 @@
 package creaturesTest;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import creatures.*;
+import creatures.Medusa;
+import creatures.Person;
 
 class MedusaTest {
 	Medusa medusa;
@@ -33,5 +34,16 @@ class MedusaTest {
 		assertEquals(1, medusa.statuesGetCount());
 		assertEquals("Perseus", medusa.getVictim(0).getName());
 		assertEquals(Person.class, medusa.getVictim(0).getClass());
+	}
+	
+	@Test
+	void testItTurnsAPersonToStoneWhenStaringAtThem() {
+		Person victim = new Person("Perseus");
+
+		assertFalse(victim.isStoned());
+		
+		medusa.stare(victim);
+		
+		assertTrue(victim.isStoned());
 	}
 }
