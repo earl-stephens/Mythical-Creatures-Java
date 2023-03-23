@@ -23,6 +23,10 @@ public class Medusa {
 		victim.setStoned(true);
 		if(statues.size() < 3) {
 			statues.add(victim);
+		} else {
+			statues.get(0).setStoned(false);
+			statues.remove(0);
+			statues.add(victim);
 		}
 	}
 	
