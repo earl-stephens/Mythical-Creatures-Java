@@ -46,4 +46,22 @@ class MedusaTest {
 		
 		assertTrue(victim.isStoned());
 	}
+	
+	@Test
+	void testItCanOnlyHave3Victims() {
+		Person victim1 = new Person("Perseus");
+		Person victim2 = new Person("Mercury");
+		Person victim3 = new Person("Apollo");
+		Person victim4 = new Person("Hades");
+		
+		medusa.stare(victim1);
+		medusa.stare(victim2);
+		medusa.stare(victim3);
+		
+		assertEquals(3, medusa.statuesGetCount());
+		
+		medusa.stare(victim4);
+		
+		assertEquals(3, medusa.statuesGetCount());		
+	}
 }

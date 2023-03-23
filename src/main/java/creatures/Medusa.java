@@ -21,7 +21,9 @@ public class Medusa {
 	
 	public void stare(Person victim) {
 		victim.setStoned(true);
-		statues.add(victim);
+		if(statues.size() < 3) {
+			statues.add(victim);
+		}
 	}
 	
 	public Person getVictim(int index) {
