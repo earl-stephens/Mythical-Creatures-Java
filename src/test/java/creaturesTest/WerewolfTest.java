@@ -40,6 +40,7 @@ class WerewolfTest {
 	@Test
 	void testItCanChangeBackToHuman() {
 		assertTrue(werewolf.isHuman());
+		assertFalse(werewolf.isWolf());
 		werewolf.change();
 		assertTrue(werewolf.isWolf());
 		assertFalse(werewolf.isHuman());
