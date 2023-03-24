@@ -43,6 +43,7 @@ public class Werewolf {
 			return false;
 		} else {
 			hungry = false;
+			victim.setDead(true);
 			return true;
 		}
 	}
