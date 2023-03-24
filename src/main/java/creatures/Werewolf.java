@@ -24,8 +24,10 @@ public class Werewolf {
 	}
 	
 	public void change() {
-		if(human) human = false;
-		else human = true;
+		if(human) {
+			hungry = true;
+			human = false;
+		} else human = true;
 	}
 	
 	public boolean isWolf() {
