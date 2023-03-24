@@ -36,4 +36,16 @@ class WerewolfTest {
 		assertTrue(werewolf.isWolf());
 		assertFalse(werewolf.isHuman());
 	}
+	
+	@Test
+	void testItCanChangeBackToHuman() {
+		assertTrue(werewolf.isHuman());
+		werewolf.change();
+		assertTrue(werewolf.isWolf());
+		assertFalse(werewolf.isHuman());
+		
+		werewolf.change();
+		
+		assertTrue(werewolf.isHuman());
+	}
 }
