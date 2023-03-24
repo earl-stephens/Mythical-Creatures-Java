@@ -23,4 +23,9 @@ class WerewolfTest {
 	void testItHasALocation() {
 		assertEquals("London", werewolf.getLocation());
 	}
+	
+	@Test
+	void testIsHumanByDefault() {
+		assertTrue(werewolf.isHuman());
+	}
 }
