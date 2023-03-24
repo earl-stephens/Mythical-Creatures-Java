@@ -60,4 +60,9 @@ class WerewolfTest {
 		
 		assertTrue(werewolf.isWolf());		
 	}
+	
+	@Test
+	void testIsNotHungryByDefault() {
+		assertFalse(werewolf.isHungry());
+	}
 }

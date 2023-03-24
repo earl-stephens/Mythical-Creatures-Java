@@ -4,6 +4,7 @@ public class Werewolf {
 	private String name;
 	private String location;
 	private boolean human = true;
+	private boolean hungry = false;
 	
 	public Werewolf(String name, String location) {
 		this.name = name;
@@ -29,5 +30,9 @@ public class Werewolf {
 	
 	public boolean isWolf() {
 		return !human;
+	}
+	
+	public boolean isHungry() {
+		return hungry;
 	}
 }
