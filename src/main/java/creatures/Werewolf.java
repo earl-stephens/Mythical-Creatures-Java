@@ -39,6 +39,11 @@ public class Werewolf {
 	}
 	
 	public boolean eat(Person victim) {
-		return !human;
+		if(human) {
+			return false;
+		} else {
+			hungry = false;
+			return true;
+		}
 	}
 }
