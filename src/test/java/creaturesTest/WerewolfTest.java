@@ -73,4 +73,12 @@ class WerewolfTest {
 		
 		assertTrue(werewolf.isHungry());
 	}
+	
+	@Test
+	void testCanEatAVictim() {
+		werewolf.change();
+		Person victim = new Person("Fiona");
+		
+		assertEquals("Growl, gnaw, chomp", werewolf.eat(victim));
+	}
 }

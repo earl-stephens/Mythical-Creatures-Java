@@ -37,4 +37,8 @@ public class Werewolf {
 	public boolean isHungry() {
 		return hungry;
 	}
+	
+	public String eat(Person victim) {
+		return "Growl, gnaw, chomp";
+	}
 }
