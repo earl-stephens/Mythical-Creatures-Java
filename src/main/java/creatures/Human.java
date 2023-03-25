@@ -15,4 +15,8 @@ public class Human {
 	public int getEncounterCounter() {
 		return encounterCounter;
 	}
+	
+	public boolean noticesOgre() {
+		return encounterCounter == 3;
+	}
 }
