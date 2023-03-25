@@ -8,10 +8,12 @@ import org.junit.jupiter.api.Test;
 
 class OgreTest {
 	Ogre ogre;
+	Human human;
 	
 	@BeforeEach
 	void setUp() {
 		ogre = new Ogre("Brak");
+		human = new Human();
 	}
 
 	@Test
@@ -33,8 +35,6 @@ class OgreTest {
 	
 	@Test
 	void testCanMeetHumans() {
-		Human human = new Human();
-		
 		assertEquals("Jane", human.getName());
 		
 		ogre.encounter(human);
@@ -44,7 +44,6 @@ class OgreTest {
 	
 	@Test
 	void testIsNoticedByHumansForEvery3rdEncounter() {
-		Human human = new Human();
 		ogre.encounter(human);
 		ogre.encounter(human);
 		
@@ -57,7 +56,6 @@ class OgreTest {
 	
 	@Test
 	void testIsNoticedByHumanOn6thEncounter() {
-		Human human = new Human();
 		for(int i = 0; i < 5; i++) {
 			ogre.encounter(human);
 		}
@@ -69,5 +67,11 @@ class OgreTest {
 		assertTrue(human.noticesOgre());
 	}
 	
+	@Test
+	void testItCanSwingAClub() {
+		ogre.swingAt(human);
+		
+		assertEquals(1, ogre.getSwings());
+	}
 	
 }

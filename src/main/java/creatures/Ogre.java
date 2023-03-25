@@ -3,6 +3,7 @@ package creatures;
 public class Ogre {
 	private String name;
 	private String home = "Swamp";
+	private int swings = 0;
 	
 	public Ogre(String name) {
 		this.name = name;
@@ -23,5 +24,13 @@ public class Ogre {
 	
 	public void encounter(Human human) {
 		human.setEncounterCounter();
+	}
+	
+	public int getSwings() {
+		return swings;
+	}
+	
+	public void swingAt(Human human) {
+		swings++;
 	}
 }
