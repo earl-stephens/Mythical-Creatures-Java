@@ -54,4 +54,20 @@ class OgreTest {
 		
 		assertTrue(human.noticesOgre());
 	}
+	
+	@Test
+	void testIsNoticedByHumanOn6thEncounter() {
+		Human human = new Human();
+		for(int i = 0; i < 5; i++) {
+			ogre.encounter(human);
+		}
+		
+		assertFalse(human.noticesOgre());
+		
+		ogre.encounter(human);
+		
+		assertTrue(human.noticesOgre());
+	}
+	
+	
 }

@@ -17,6 +17,7 @@ public class Human {
 	}
 	
 	public boolean noticesOgre() {
-		return encounterCounter == 3;
+		if(encounterCounter % 3 == 0) return true;
+		else return false;
 	}
 }
