@@ -74,4 +74,18 @@ class OgreTest {
 		assertEquals(1, ogre.getSwings());
 	}
 	
+	@Test
+	void testSwingsClubWhenNoticedByHuman() {
+		ogre.encounter(human);
+		ogre.encounter(human);
+		
+		assertEquals(0, ogre.getSwings());
+		
+		ogre.encounter(human);
+		
+		assertEquals(1, ogre.getSwings());
+		assertTrue(human.noticesOgre());
+	}
+	
+	
 }
