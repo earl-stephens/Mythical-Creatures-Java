@@ -19,4 +19,8 @@ class OgreTest {
 		assertEquals("Brak", ogre.getName());
 	}
 
+	@Test
+	void testLivesSomewhereByDefault() {
+		assertEquals("Swamp", ogre.getHome());
+	}
 }
