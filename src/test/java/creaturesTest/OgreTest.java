@@ -30,4 +30,15 @@ class OgreTest {
 		
 		assertEquals("Castle", ogre2.getHome());
 	}
+	
+	@Test
+	void testCanMeetHumans() {
+		Human human = new Human();
+		
+		assertEquals("Jane", human.getName());
+		
+		ogre.encounter(human);
+		
+		assertEquals(1, human.getEncounterCounter());
+	}
 }

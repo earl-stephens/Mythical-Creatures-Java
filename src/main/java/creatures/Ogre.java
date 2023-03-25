@@ -20,4 +20,8 @@ public class Ogre {
 	public String getHome() {
 		return home;
 	}
+	
+	public void encounter(Human human) {
+		human.setEncounterCounter();
+	}
 }
