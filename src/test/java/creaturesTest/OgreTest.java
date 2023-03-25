@@ -23,4 +23,11 @@ class OgreTest {
 	void testLivesSomewhereByDefault() {
 		assertEquals("Swamp", ogre.getHome());
 	}
+	
+	@Test
+	void testDoesntHaveToLiveInASwamp() {
+		Ogre ogre2 =  new Ogre("Brak", "Castle");
+		
+		assertEquals("Castle", ogre2.getHome());
+	}
 }

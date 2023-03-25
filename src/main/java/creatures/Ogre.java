@@ -8,6 +8,11 @@ public class Ogre {
 		this.name = name;
 	}
 	
+	public Ogre(String name, String home) {
+		this.name = name;
+		this.home = home;
+	}
+	
 	public String getName() {
 		return name;
 	}
