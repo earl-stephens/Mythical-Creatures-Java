@@ -100,4 +100,18 @@ class OgreTest {
 		assertEquals(2, ogre.getSwings());
 		assertTrue(human.isKnockedOut());
 	}
+	
+	@Test
+	void testItApologizesAndWakesUpHuman() {
+		for(int i = 0; i < 5; i++) {
+			ogre.encounter(human);
+		}
+		assertFalse(human.isKnockedOut());
+		ogre.encounter(human);
+		assertTrue(human.isKnockedOut());
+		
+		ogre.apologize(human);
+		
+		assertFalse(human.isKnockedOut());
+	}
 }

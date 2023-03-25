@@ -33,6 +33,10 @@ public class Ogre {
 	
 	public void swingAt(Human human) {
 		swings++;
-		if(swings % 2 == 0) human.setKnockedOut();
+		if(swings % 2 == 0) human.setKnockedOut(true);
+	}
+	
+	public void apologize(Human human) {
+		human.setKnockedOut(false);
 	}
 }

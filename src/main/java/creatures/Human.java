@@ -26,7 +26,7 @@ public class Human {
 		return knockedOut;
 	}
 	
-	public void setKnockedOut() {
-		knockedOut = true;
+	public void setKnockedOut(Boolean knockedOutValue) {
+		knockedOut = knockedOutValue;
 	}
 }
