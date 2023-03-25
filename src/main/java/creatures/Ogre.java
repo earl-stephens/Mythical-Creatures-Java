@@ -24,7 +24,7 @@ public class Ogre {
 	
 	public void encounter(Human human) {
 		human.setEncounterCounter();
-		if(human.getEncounterCounter() == 3) swingAt(human);
+		if(human.getEncounterCounter() % 3 == 0) swingAt(human);
 	}
 	
 	public int getSwings() {
@@ -33,5 +33,6 @@ public class Ogre {
 	
 	public void swingAt(Human human) {
 		swings++;
+		if(swings % 2 == 0) human.setKnockedOut();
 	}
 }

@@ -3,6 +3,7 @@ package creatures;
 public class Human {
 	private String name = "Jane";
 	private int encounterCounter = 0;
+	private boolean knockedOut = false;
 	
 	public String getName() {
 		return name;
@@ -19,5 +20,13 @@ public class Human {
 	public boolean noticesOgre() {
 		if(encounterCounter % 3 == 0) return true;
 		else return false;
+	}
+	
+	public boolean isKnockedOut() {
+		return knockedOut;
+	}
+	
+	public void setKnockedOut() {
+		knockedOut = true;
 	}
 }

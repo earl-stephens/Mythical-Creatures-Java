@@ -87,5 +87,17 @@ class OgreTest {
 		assertTrue(human.noticesOgre());
 	}
 	
-	
+	@Test
+	void testItHitsHumanOnEverySecondSwing() {
+		for(int i = 0; i < 5; i++) {
+			ogre.encounter(human);
+		}
+		
+		assertFalse(human.isKnockedOut());
+		ogre.encounter(human);
+		
+		assertEquals(6, human.getEncounterCounter());
+		assertEquals(2, ogre.getSwings());
+		assertTrue(human.isKnockedOut());
+	}
 }
