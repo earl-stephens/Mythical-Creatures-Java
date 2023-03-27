@@ -14,5 +14,13 @@ class DirewolfTest {
 		
 		assertEquals("Nymeria", wolf.getName());
 	}
+	
+	@Test
+	void testCanHaveDifferentNameAndHome() {
+		wolf = new Direwolf("Lady");
+		
+		assertEquals("Lady", wolf.getName());
+		assertEquals("Beyond the Wall", wolf.getHome());
+	}
 
 }
