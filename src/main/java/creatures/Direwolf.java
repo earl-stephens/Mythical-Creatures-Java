@@ -3,6 +3,7 @@ package creatures;
 public class Direwolf {
 	private String name;
 	private String home = "Beyond the Wall";
+	private String size = "Massive";
 	
 	public Direwolf(String name) {
 		this.name = name;
@@ -14,5 +15,9 @@ public class Direwolf {
 	
 	public String getHome() {
 		return home;
+	}
+	
+	public String getSize() {
+		return size;
 	}
 }
