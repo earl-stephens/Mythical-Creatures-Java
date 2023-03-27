@@ -9,6 +9,12 @@ public class Direwolf {
 		this.name = name;
 	}
 	
+	public Direwolf(String name, String home, String size) {
+		this.name = name;
+		this.home = home;
+		this.size = size;
+	}
+	
 	public String getName() {
 		return name;
 	}

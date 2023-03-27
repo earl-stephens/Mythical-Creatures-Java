@@ -30,4 +30,13 @@ class DirewolfTest {
 		assertEquals("Ghost", wolf.getName());
 		assertEquals("Massive", wolf.getSize());
 	}
+	
+	@Test
+	void testItCanHaveAnotherHomeAndAnotherSize() {
+		wolf = new Direwolf("Shaggydog", "Winterfell", "Smol Pupper");
+		
+		assertEquals("Shaggydog", wolf.getName());
+		assertEquals("Winterfell", wolf.getHome());
+		assertEquals("Smol Pupper", wolf.getSize());
+	}
 }
