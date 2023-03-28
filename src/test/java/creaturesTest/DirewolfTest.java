@@ -66,4 +66,14 @@ class DirewolfTest {
 		
 		assertEquals("Arya", wolf.starksToProtect.get(0).getFirstName());
 	}
+	
+	@Test
+	void testCanOnlyProtectStarkChildrenIfTheyAreInTheSameLocation() {
+		wolf = new Direwolf("Ghost");
+		Stark stark = new Stark("Jon", "Kings Landing");
+		
+		wolf.protects(stark);
+		
+		assertEquals(0, wolf.starksToProtect.size());
+	}
 }

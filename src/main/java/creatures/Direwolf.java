@@ -37,6 +37,8 @@ public class Direwolf {
 	}
 	
 	public void protects(Stark stark) {
-		starksToProtect.add(stark);
+		if(stark.getLocation().equals(home)) {
+			starksToProtect.add(stark);
+		}
 	}
 }
