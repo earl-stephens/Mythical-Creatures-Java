@@ -15,6 +15,11 @@ public class Direwolf {
 		this.size = size;
 	}
 	
+	public Direwolf(String name, String home) {
+		this.name = name;
+		this.home = home;
+	}
+	
 	public String getName() {
 		return name;
 	}

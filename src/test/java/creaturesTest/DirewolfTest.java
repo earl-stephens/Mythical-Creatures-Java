@@ -39,4 +39,13 @@ class DirewolfTest {
 		assertEquals("Winterfell", wolf.getHome());
 		assertEquals("Smol Pupper", wolf.getSize());
 	}
+	
+	@Test
+	void testTheStarksAreInWinterfellByDefault() {
+		wolf = new Direwolf("Summer", "Winterfell");
+		Stark stark = new Stark("Bran");
+		
+		assertEquals("Winterfell", wolf.getHome());
+		assertEquals("Winterfell", stark.getLocation());
+	}
 }
