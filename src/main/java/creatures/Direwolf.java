@@ -1,9 +1,13 @@
 package creatures;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Direwolf {
 	private String name;
 	private String home = "Beyond the Wall";
 	private String size = "Massive";
+	public List<Stark> starksToProtect = new ArrayList<>();
 	
 	public Direwolf(String name) {
 		this.name = name;

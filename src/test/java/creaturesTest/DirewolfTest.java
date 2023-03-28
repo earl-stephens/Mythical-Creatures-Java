@@ -48,4 +48,12 @@ class DirewolfTest {
 		assertEquals("Winterfell", wolf.getHome());
 		assertEquals("Winterfell", stark.getLocation());
 	}
+	
+	@Test
+	void testItStartsWithNoStarksToProtect() {
+		wolf = new Direwolf("Nymeria");
+		Stark stark = new Stark("Arya");
+		
+		assertEquals(0, wolf.starksToProtect.size());
+	}
 }
