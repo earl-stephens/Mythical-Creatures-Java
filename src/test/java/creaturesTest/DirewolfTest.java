@@ -56,4 +56,14 @@ class DirewolfTest {
 		
 		assertEquals(0, wolf.starksToProtect.size());
 	}
+	
+	@Test
+	void testItProtectsTheStarkChildren() {
+		wolf = new Direwolf("Nymeria", "Riverlands");
+		Stark stark = new Stark("Arya", "Riverlands");
+		
+		wolf.protects(stark);
+		
+		assertEquals("Arya", wolf.starksToProtect.get(0).getFirstName());
+	}
 }

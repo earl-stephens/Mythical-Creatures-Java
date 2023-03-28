@@ -35,4 +35,8 @@ public class Direwolf {
 	public String getSize() {
 		return size;
 	}
+	
+	public void protects(Stark stark) {
+		starksToProtect.add(stark);
+	}
 }
