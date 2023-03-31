@@ -9,6 +9,7 @@ public class Direwolf {
 	private String size = "Massive";
 	private int numberOfStarksToProtectAtOneTime = 2;
 	public List<Stark> starksToProtect = new ArrayList<>();
+	private boolean huntsWhiteWalkers = true;
 	
 	public Direwolf(String name) {
 		this.name = name;
@@ -41,6 +42,7 @@ public class Direwolf {
 		if(stark.getLocation().equals(home) && starksToProtect.size() < numberOfStarksToProtectAtOneTime) {
 			starksToProtect.add(stark);
 			stark.setSafe();
+			huntsWhiteWalkers = false;
 		}
 	}
 	
@@ -49,6 +51,6 @@ public class Direwolf {
 	}
 	
 	public boolean huntsWhiteWalkers() {
-		return true;
+		return huntsWhiteWalkers;
 	}
 }

@@ -138,4 +138,13 @@ class DirewolfTest {
 		
 		assertTrue(wolf.huntsWhiteWalkers());
 	}
+	
+	@Test
+	void testItWillNotHuntWhiteWalkersWhileProtectingStarks() {
+		wolf = new Direwolf("Nymeria", "Winterfell");
+		Stark aryaStark = new Stark("Arya");
+		wolf.protects(aryaStark);
+		
+		assertFalse(wolf.huntsWhiteWalkers());
+	}
 }
