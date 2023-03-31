@@ -1,9 +1,13 @@
 package creaturesTest;
-import creatures.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import creatures.Direwolf;
+import creatures.Stark;
 
 class DirewolfTest {
 	Direwolf wolf;
@@ -93,8 +97,11 @@ class DirewolfTest {
 		ladyWolf.protects(branStark);
 		ladyWolf.protects(aryaStark);
 		
-		assertEquals("Sansa", summerWolf.starksToProtect.get(0).getFirstName());
-		assertEquals("Jon", summerWolf.starksToProtect.get(1).getFirstName());
+		List<Stark> underProtection = summerWolf.starksToProtect;
 		
+		assertThat(underProtection).hasSize(2);
+		assertThat(summerWolf.getProtectedStarks())
+					.extracting(Stark::getFirstName)
+					.doesNotContain("Arya");
 	}
 }

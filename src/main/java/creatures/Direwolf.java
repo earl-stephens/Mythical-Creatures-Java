@@ -41,4 +41,8 @@ public class Direwolf {
 			starksToProtect.add(stark);
 		}
 	}
+	
+	public List<Stark> getProtectedStarks() {
+		return starksToProtect;
+	}
 }
