@@ -131,4 +131,11 @@ class DirewolfTest {
 		assertTrue(aryaStark.isSafe());
 		assertFalse(sansaStark.isSafe());
 	}
+	
+	@Test
+	void testItHuntsWhiteWalkers() {
+		wolf = new Direwolf("Nymeria", "Winterfell");
+		
+		assertTrue(wolf.huntsWhiteWalkers());
+	}
 }

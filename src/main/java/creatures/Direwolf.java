@@ -47,4 +47,8 @@ public class Direwolf {
 	public List<Stark> getProtectedStarks() {
 		return starksToProtect;
 	}
+	
+	public boolean huntsWhiteWalkers() {
+		return true;
+	}
 }
