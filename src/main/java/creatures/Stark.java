@@ -3,6 +3,8 @@ package creatures;
 public class Stark {
 	private String location = "Winterfell";
 	private String name;
+	private boolean isSafe = false;
+	private String houseWords = "Winter is Coming";
 	
 	public Stark(String name) {
 		this.name = name;
@@ -19,5 +21,13 @@ public class Stark {
 	
 	public String getFirstName() {
 		return name;
+	}
+	
+	public boolean isSafe() {
+		return isSafe;
+	}
+	
+	public String getHouseWords() {
+		return houseWords;
 	}
 }
