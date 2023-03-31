@@ -40,6 +40,7 @@ public class Direwolf {
 	public void protects(Stark stark) {
 		if(stark.getLocation().equals(home) && starksToProtect.size() < numberOfStarksToProtectAtOneTime) {
 			starksToProtect.add(stark);
+			stark.setSafe();
 		}
 	}
 	

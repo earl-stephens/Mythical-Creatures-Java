@@ -119,4 +119,16 @@ class DirewolfTest {
 		assertFalse(jonStark.isSafe());
 		assertEquals("Winter is Coming", jonStark.getHouseWords());
 	}
+	
+	@Test
+	void testItProtectsTheStarks() {
+		wolf = new Direwolf("Nymeria", "Winterfell");
+		Stark aryaStark = new Stark("Arya");
+		Stark sansaStark = new Stark("Sansa");
+		
+		wolf.protects(aryaStark);
+		
+		assertTrue(aryaStark.isSafe());
+		assertFalse(sansaStark.isSafe());
+	}
 }

@@ -30,4 +30,8 @@ public class Stark {
 	public String getHouseWords() {
 		return houseWords;
 	}
+	
+	public void setSafe() {
+		isSafe = true;
+	}
 }
