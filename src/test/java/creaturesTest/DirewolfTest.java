@@ -1,5 +1,6 @@
 package creaturesTest;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.setAllowExtractingPrivateFields;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
@@ -102,6 +103,13 @@ class DirewolfTest {
 		assertThat(underProtection).hasSize(2);
 		assertThat(summerWolf.getProtectedStarks())
 					.extracting(Stark::getFirstName)
+					.doesNotContain("Arya")
+					.containsExactlyInAnyOrder("Jon", "Sansa");
+		
+		assertThat(ladyWolf.getProtectedStarks())
+					.hasSize(2)
+					.extracting(Stark::getFirstName)
+					.containsExactlyInAnyOrder("Bran", "Rob")
 					.doesNotContain("Arya");
 	}
 }
