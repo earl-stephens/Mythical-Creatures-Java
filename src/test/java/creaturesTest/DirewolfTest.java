@@ -76,4 +76,25 @@ class DirewolfTest {
 		
 		assertEquals(0, wolf.starksToProtect.size());
 	}
+	
+	@Test
+	void testCanOnlyProtectTwoStarksAtATime() {
+		Direwolf summerWolf = new Direwolf("Summer", "Winterfell");
+		Direwolf ladyWolf = new Direwolf("Lady", "Winterfell");
+		Stark sansaStark = new Stark("Sansa");
+		Stark jonStark = new Stark("Jon");
+		Stark robStark = new Stark("Rob");
+		Stark branStark = new Stark("Bran");
+		Stark aryaStark = new Stark("Arya");
+		
+		summerWolf.protects(sansaStark);
+		summerWolf.protects(jonStark);
+		ladyWolf.protects(robStark);
+		ladyWolf.protects(branStark);
+		ladyWolf.protects(aryaStark);
+		
+		assertEquals("Sansa", summerWolf.starksToProtect.get(0).getFirstName());
+		assertEquals("Jon", summerWolf.starksToProtect.get(1).getFirstName());
+		
+	}
 }
