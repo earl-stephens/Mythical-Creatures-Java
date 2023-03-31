@@ -7,6 +7,7 @@ public class Direwolf {
 	private String name;
 	private String home = "Beyond the Wall";
 	private String size = "Massive";
+	private int numberOfStarksToProtectAtOneTime = 2;
 	public List<Stark> starksToProtect = new ArrayList<>();
 	
 	public Direwolf(String name) {
@@ -37,7 +38,7 @@ public class Direwolf {
 	}
 	
 	public void protects(Stark stark) {
-		if(stark.getLocation().equals(home)) {
+		if(stark.getLocation().equals(home) && starksToProtect.size() < numberOfStarksToProtectAtOneTime) {
 			starksToProtect.add(stark);
 		}
 	}
