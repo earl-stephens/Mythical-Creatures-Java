@@ -31,7 +31,7 @@ public class Stark {
 		return houseWords;
 	}
 	
-	public void setSafe() {
-		isSafe = true;
+	public void setSafe(boolean safe) {
+		isSafe = safe;
 	}
 }

@@ -41,7 +41,7 @@ public class Direwolf {
 	public void protects(Stark stark) {
 		if(stark.getLocation().equals(home) && starksToProtect.size() < numberOfStarksToProtectAtOneTime) {
 			starksToProtect.add(stark);
-			stark.setSafe();
+			stark.setSafe(true);
 			huntsWhiteWalkers = false;
 		}
 	}
@@ -52,5 +52,11 @@ public class Direwolf {
 	
 	public boolean huntsWhiteWalkers() {
 		return huntsWhiteWalkers;
+	}
+	
+	public Stark leaves(Stark stark) {
+		starksToProtect.remove(stark);
+		stark.setSafe(false);
+		return stark;
 	}
 }

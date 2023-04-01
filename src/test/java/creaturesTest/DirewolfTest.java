@@ -147,4 +147,39 @@ class DirewolfTest {
 		
 		assertFalse(wolf.huntsWhiteWalkers());
 	}
+	
+	@Test
+	void testItCanLeaveAndStopProtectingTheStarks() {
+		Direwolf summerWolf = new Direwolf("Summer", "Winterfell");
+		Direwolf ladyWolf = new Direwolf("Lady", "Winterfell");
+		Stark sansaStark = new Stark("Sansa");
+		Stark aryaStark = new Stark("Arya");
+		
+		summerWolf.protects(aryaStark);
+		ladyWolf.protects(sansaStark);
+		
+		summerWolf.leaves(aryaStark);
+		
+		assertEquals(0, summerWolf.getProtectedStarks().size());
+		assertThat(ladyWolf.getProtectedStarks())
+					.extracting(Stark::getFirstName)
+					.containsExactlyInAnyOrder("Sansa");
+		assertFalse(aryaStark.isSafe());
+	}
+	
+	@Test
+	void testItReturnsTheStarkObjectWhenItLeaves() {
+		Direwolf summerWolf = new Direwolf("Summer", "Winterfell");
+		Direwolf ladyWolf = new Direwolf("Lady", "Winterfell");
+		Stark sansaStark = new Stark("Sansa");
+		Stark aryaStark = new Stark("Arya");
+		Stark rickonStark = new Stark("Rickon");
+		
+		summerWolf.protects(aryaStark);
+		ladyWolf.protects(sansaStark);
+		summerWolf.leaves(aryaStark);
+		
+		Stark expected = ladyWolf.leaves(rickonStark);
+		assertEquals("Rickon", expected.getFirstName());
+	}
 }
