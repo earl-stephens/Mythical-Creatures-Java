@@ -58,7 +58,7 @@ class DirewolfTest {
 		wolf = new Direwolf("Nymeria");
 		Stark stark = new Stark("Arya");
 		
-		assertEquals(0, wolf.starksToProtect.size());
+		assertEquals(0, wolf.getProtectedStarks().size());
 	}
 	
 	@Test
@@ -68,7 +68,7 @@ class DirewolfTest {
 		
 		wolf.protects(stark);
 		
-		assertEquals("Arya", wolf.starksToProtect.get(0).getFirstName());
+		assertEquals("Arya", wolf.getProtectedStarks().get(0).getFirstName());
 	}
 	
 	@Test
@@ -78,7 +78,7 @@ class DirewolfTest {
 		
 		wolf.protects(stark);
 		
-		assertEquals(0, wolf.starksToProtect.size());
+		assertEquals(0, wolf.getProtectedStarks().size());
 	}
 	
 	@Test
@@ -97,7 +97,7 @@ class DirewolfTest {
 		ladyWolf.protects(branStark);
 		ladyWolf.protects(aryaStark);
 		
-		List<Stark> underProtection = summerWolf.starksToProtect;
+		List<Stark> underProtection = summerWolf.getProtectedStarks();
 		
 		assertThat(underProtection).hasSize(2);
 		assertThat(summerWolf.getProtectedStarks())

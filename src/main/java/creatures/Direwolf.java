@@ -8,7 +8,7 @@ public class Direwolf {
 	private String home = "Beyond the Wall";
 	private String size = "Massive";
 	private int numberOfStarksToProtectAtOneTime = 2;
-	public List<Stark> starksToProtect = new ArrayList<>();
+	private List<Stark> starksToProtect = new ArrayList<>();
 	private boolean huntsWhiteWalkers = true;
 	
 	public Direwolf(String name) {
