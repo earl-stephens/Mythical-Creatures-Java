@@ -18,8 +18,7 @@ public class Human {
 	}
 	
 	public boolean noticesOgre() {
-		if(encounterCounter % 3 == 0) return true;
-		else return false;
+		return (encounterCounter % 3 == 0);
 	}
 	
 	public boolean isKnockedOut() {
